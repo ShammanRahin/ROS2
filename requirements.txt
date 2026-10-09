@@ -1,0 +1,5 @@
+# Extra Python libraries for this repo, installed into .venv by scripts/setup-venv.sh.
+# ROS 2's own Python packages (rclpy, cv_bridge, ...) and OpenCV come from apt -- don't pip install those.
+pymavlink>=2.4.40   # MAVLink messages for drone scripts (drone/mission_fsm.py)
+pyserial>=3.5       # talk to Arduino / STM32 boards over USB serial
+matplotlib>=3.6     # plot logged data

@@ -1,0 +1,20 @@
+# colcon workspace outputs (rebuilt with `colcon build`)
+build/
+install/
+log/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# recordings and run logs
+rosbag2_*/
+*.db3
+*.mcap
+mission_log.csv
+
+# editor / OS
+.vscode/
+*.swp
+.DS_Store

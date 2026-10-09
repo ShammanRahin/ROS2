@@ -1,0 +1,34 @@
+{
+  "name": "ROS 2 Jazzy dev",
+  "build": {
+    "dockerfile": "../docker/Dockerfile",
+    "context": "../docker",
+    "args": {
+      "USER_UID": "1000",
+      "USER_GID": "1000",
+      "WITH_ARDUPILOT": "0"
+    }
+  },
+  "remoteUser": "dev",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/dev/ROS2,type=bind",
+  "workspaceFolder": "/home/dev/ROS2",
+  "initializeCommand": "xhost +local: >/dev/null 2>&1 || true",
+  "runArgs": [
+    "--net=host",
+    "--ipc=host",
+    "--device=/dev/dri",
+    "-e", "DISPLAY=${localEnv:DISPLAY}",
+    "-e", "QT_X11_NO_MITSHM=1",
+    "-v", "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.cpptools",
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml"
+      ]
+    }
+  }
+}

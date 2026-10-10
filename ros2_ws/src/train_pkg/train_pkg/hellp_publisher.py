@@ -1,12 +1,12 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
-from example_interfaces.msg import String
+from std_msgs.msg import String
 
 class helloPublisher(Node):
     def __init__(self):
         super().__init__('hello_publisher')
-        self.publisher_ = self.create_publisher(String, 'hello_topic', 10)
+        self.publisher_ = self.create_publisher(String, 'chatter', 10)
         timer_period = .660  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0

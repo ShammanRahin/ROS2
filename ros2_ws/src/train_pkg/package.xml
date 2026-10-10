@@ -6,13 +6,9 @@
   <description>TODO: Package description</description>
   <maintainer email="darkindred456123@gmail.com">rahin</maintainer>
   <license>TODO: License declaration</license>
-  <dep >rclpy</dep>
-  <exec_depend>rclpy</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
-  <test_depend>ament_lint_auto</test_depend>
-  <depend>example_interfaces</depend>
-  
 
+  <depend>rclpy</depend>
+  <depend>example_interfaces</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

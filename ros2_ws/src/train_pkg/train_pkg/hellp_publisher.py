@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from rlcpy.executors import ExternalShutdownException
+from rclpy.executors import ExternalShutdownException
 from example_interfaces.msg import String
 
 class helloPublisher(Node):
@@ -24,10 +24,11 @@ def main(args=None):
 
     try:
         rclpy.spin(hello_publisher)
-    except ExternalShutdownException:
+    except (KeyboardInterrupt, ExternalShutdownException):
         pass
     finally:
         hello_publisher.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 if __name__ == '__main__':
     main()

@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'hello_publisher = train_pkg.hellp_publisher:main',
+            'hello_subscriber = train_pkg.hellp_subscriber:main',
         ],
     },
 )

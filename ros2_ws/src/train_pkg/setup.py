@@ -26,6 +26,9 @@ setup(
         'console_scripts': [
             'hello_publisher = train_pkg.hellp_publisher:main',
             'hello_subscriber = train_pkg.hellp_subscriber:main',
+            'my_service = train_pkg.my_service:main',
+            'my_client = train_pkg.my_client:main',
+
         ],
     },
 )

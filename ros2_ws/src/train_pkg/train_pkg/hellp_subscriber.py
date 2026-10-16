@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
-from example_interfaces.msg import String
+from std_msgs.msg import String
 
 class helloSubscriber(Node):
     def __init__(self):

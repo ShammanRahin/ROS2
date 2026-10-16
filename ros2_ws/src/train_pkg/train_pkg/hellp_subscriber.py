@@ -8,7 +8,7 @@ class helloSubscriber(Node):
         super().__init__('hello_subscriber')
         self.subscription = self.create_subscription(
             String,
-            'hello_topic',
+            'chatter',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning

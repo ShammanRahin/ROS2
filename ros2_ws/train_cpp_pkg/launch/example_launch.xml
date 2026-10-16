@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="train_pkg" exec="publisher_with_params"/>
+    <node pkg="train_pkg" exec="hello_subscriber"/>
+</launch>
+
+        
